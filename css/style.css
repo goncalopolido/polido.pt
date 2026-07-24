@@ -1,0 +1,92 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: white;
+  color: black;
+
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: white;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  word-break: break-word;
+}
+
+.icons {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  color: inherit;
+}
+
+.icons a {
+  flex: 0 0 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: currentColor;
+  text-decoration: none;
+
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.icons a:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.icons svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  fill: currentColor;
+}
+
+@media (max-width: 480px) {
+  .icons {
+    flex-wrap: wrap;
+  }
+
+  .icons a {
+    flex: 0 0 60px;
+    width: 60px;
+  }
+}
